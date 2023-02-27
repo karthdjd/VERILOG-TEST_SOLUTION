@@ -1,4 +1,4 @@
-module fifo_11 (
+module fifo(
 
   input clk, rst,
 
