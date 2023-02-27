@@ -1,3 +1,3 @@
 module and_g_lev(input a,input b,output c);
-assign c=a&b;
+  and(c,a,b);
 endmodule
