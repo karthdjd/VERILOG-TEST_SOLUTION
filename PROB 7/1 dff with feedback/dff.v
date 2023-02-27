@@ -1,4 +1,4 @@
-module mux_ff(
+module dff(
 
 	input d,
 
@@ -7,16 +7,13 @@ module mux_ff(
 	input clock,
 
 	output q);
+         wire o;
 
 
 
-wire o;
+mux mux1(d,q,e,o);
 
-
-
-mux dut1(d,q,e,o);
-
-ff dut2(o,clock,q);
+ff ff1(o,clock,q);
 
 
 
