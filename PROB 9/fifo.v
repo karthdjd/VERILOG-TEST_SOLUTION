@@ -12,13 +12,13 @@ module fifo(
 
 );
 
- assign full = ({~w_ptr[1023],w_ptr[1022:0]}  == r_ptr[1023:0] ? 1 : 0 );
+  assign full = ({~w_ptr[9],w_ptr[8:0]}  == r_ptr[8:0] ? 1 : 0 );
 
  assign empty = (w_ptr == r_ptr) ? 1 : 0;
 
  
 
-  reg [1023:0] w_ptr, r_ptr;
+  reg [9:0] w_ptr, r_ptr;
 
   reg [31:0] fifo[1024];
 
